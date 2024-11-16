@@ -26,7 +26,7 @@ const arrayOfQuotes = [
 
 let lastIndex = -1;
 
-function generateQuote() {
+function QuoteGenerator() {
   let randomIndex;
   do {
     randomIndex = Math.floor(Math.random() * arrayOfQuotes.length);
@@ -36,12 +36,12 @@ function generateQuote() {
 
   const { quote, author } = arrayOfQuotes[randomIndex];
 
-  const quoteOutput = document.querySelector("#quoteOutput");
-  const authorOutput = document.querySelector("#authorOutput");
+  const quoteOutput = document.querySelector("#outPut");
+  const authorOutput = document.querySelector("#author");
 
   quoteOutput.textContent = `"${quote}"`;
   authorOutput.textContent = `--${author}`;
 }
 
 const btn = document.querySelector("#btn");
-btn.onclick = generateQuote;
+btn.onclick = QuoteGenerator;
