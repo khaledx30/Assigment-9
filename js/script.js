@@ -1,26 +1,27 @@
-const arrayOfQuotes = [
+const quotes = [
   {
-    author: "Jim Rohn",
-    quote: "Beware of what you become in pursuit of what you want.",
+    author: "Oscar Wilde",
+    quote: "Be yourself; everyone else is already taken",
   },
   {
-    author: "Epictetus",
+    author: "Marilyn Monroe",
     quote:
-      "It's not what happens to you, but how you react to it that matters.",
+      "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best",
   },
-  { author: "Frank Sinatra", quote: "The best revenge is massive success." },
+  { author: "Frank Zappa", quote: "So many books, so little time." },
   {
-    author: "Wayne Gretzy",
-    quote: "You miss 100% of the shots you don't take.",
-  },
-  {
-    author: "Nelson Mandela",
+    author: "Albert Einstein",
     quote:
-      "Resentment is like drinking poison and waiting for your enemies to die.",
+      "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
   },
   {
-    author: "Elbert Hubbard",
-    quote: "Do not take life too seriously. You will not get out alive.",
+    author: "Marcus Tullius Cicero",
+    quote: "A room without books is like a body without a soul",
+  },
+  {
+    author: "Bernard M. Baruch",
+    quote:
+      "Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
   },
 ];
 
@@ -29,12 +30,12 @@ let lastIndex = -1;
 function QuoteGenerator() {
   let randomIndex;
   do {
-    randomIndex = Math.floor(Math.random() * arrayOfQuotes.length);
+    randomIndex = Math.floor(Math.random() * quotes.length);
   } while (randomIndex === lastIndex);
 
   lastIndex = randomIndex;
 
-  const { quote, author } = arrayOfQuotes[randomIndex];
+  const { quote, author } = quotes[randomIndex];
 
   const quoteOutput = document.querySelector("#outPut");
   const authorOutput = document.querySelector("#author");
